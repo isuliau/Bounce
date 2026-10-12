@@ -1,6 +1,9 @@
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using Unity.Burst;
 
 public class Player : MonoBehaviour
 {
@@ -15,11 +18,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float boostInterval = 0.01f; 
 
     [SerializeField] private CinemachineCamera cam; 
+    [SerializeField] private PlayerBurst burst;
     [SerializeField] private float Camsize = 10f; 
     private Vector2 lastInputDirection;
     private bool isHoldingBoost = false;
     private float boostTimer = 0f;
-
+    public bool jumped;
     bool IsGrounded()
     {
         return Physics2D.OverlapCircle(feet.position, groundCheckRadius, groundLayer);
@@ -27,12 +31,18 @@ public class Player : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.started && IsGrounded())
+        if (callbackContext.started && IsGrounded() && !burst.pushed)
         {
+            StartCoroutine(jumpedd());
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
         }
     }
-
+      public IEnumerator jumpedd()
+{
+jumped = true;
+yield return new WaitForSeconds(0.3f);
+jumped = false;
+}
     void Update()
     {
         if (isHoldingBoost)
@@ -78,14 +88,13 @@ public class Player : MonoBehaviour
 private bool bigcam = false;
 public void BigCamera()
   {
-    Debug.Log("fart");
 if(!bigcam){
     cam.Lens.OrthographicSize = Camsize;
     bigcam =true;
   }
     else
     {
-      cam.Lens.OrthographicSize = 15f;
+      cam.Lens.OrthographicSize = 20f;
       bigcam =false;
     }
   }

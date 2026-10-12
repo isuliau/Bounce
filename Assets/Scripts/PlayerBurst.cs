@@ -6,16 +6,20 @@ public class PlayerBurst : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject soul;
+    [SerializeField] private GameObject BurstDarken;
+    [SerializeField] private Player player;
+    
     private Vector2 rayDirection;
   [SerializeField] private float rayDistance = 2f;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private float push;
     private float directiony = 0;
     private float directionx = 0;
-public void Burst()
+    public bool pushed = false;
+    public void Burst()
     {
-        if(souling){
-        StartCoroutine(SoulMode());
+        if(souling && !player.jumped){
+        
         rayDirection = transform.right;
         RaycastHit2D hitr = Physics2D.Raycast(transform.position, rayDirection, rayDistance, obstacleLayer);
         rayDirection = -transform.right;
@@ -35,53 +39,68 @@ public void Burst()
     
         if (hitr.collider != null)
         {
-         directionx -= push;   
+         directionx -= push; 
+         pushed = true;  
         }
         if (hitl.collider != null)
         {
          directionx += push;   
+         pushed = true;  
         }
         if (hitu.collider != null)
         {
-         directiony -= push;   
+         directiony -= push;
+         pushed = true;     
         }
         if (hitd.collider != null)
         {
          directiony += push;   
+         pushed = true;  
         }
         if (hitru.collider != null)
         {
          directionx -= push;   
-         directiony -= push;  
+         directiony -= push;
+         pushed = true;    
         }
         if (hitlu.collider != null)
         {
          directionx += push;  
-         directiony -= push;   
+         directiony -= push;
+         pushed = true;     
         }
         if (hitrd.collider != null)
         {
         directionx -= push; 
-         directiony -= push;   
+         directiony -= push;
+         pushed = true;     
         }
         if (hitld.collider != null)
         {
         directionx += push; 
-         directiony += push;   
+         directiony += push;
+         pushed = true;     
         }
         rb.AddForce(new Vector2(directionx, directiony), ForceMode2D.Impulse);
     directiony = 0; directionx = 0;
+    StartCoroutine(SoulMode());
     }}
 private bool souling = true; 
    public IEnumerator SoulMode()
 {
+
     soul.SetActive(true);
     souling = false;
-    if(Mathf.Abs(rb.linearVelocity.x) > 50 || Mathf.Abs(rb.linearVelocity.y) > 50)
+    if((Mathf.Abs(rb.linearVelocity.x) > 50 || Mathf.Abs(rb.linearVelocity.y) > 50) && pushed && !player.jumped){
     Time.timeScale = 0.5f;
+     BurstDarken.SetActive(true);
+    }
     yield return new WaitForSeconds(0.1f);
     soul.SetActive(false);
-    yield return new WaitForSeconds(0.4f);
+    yield return new WaitForSeconds(0.2f);
+    pushed = false;
+    yield return new WaitForSeconds(0.2f);
+    BurstDarken.SetActive(false);  
     Time.timeScale = 1f;
     souling = true;
 }
