@@ -153,12 +153,12 @@ MonoBehaviour:
     pointSizeSamplingMode: 1
     pointSize: 90
     padding: 9
-    paddingMode: 0
+    paddingMode: 2
     packingMode: 4
     atlasWidth: 1024
     atlasHeight: 1024
-    characterSetSelectionMode: 6
-    characterSequence: 
+    characterSetSelectionMode: 1
+    characterSequence: 32 - 126, 160 - 255, 8192 - 8303, 8364, 8482, 9633
     referencedFontAssetGUID: 8a89fa14b10d46a99122fd4f73fca9a2
     referencedTextAssetGUID: 
     fontStyle: 0

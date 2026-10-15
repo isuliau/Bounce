@@ -4,7 +4,6 @@ using TMPro;
 using JetBrains.Annotations;
 public class Flag : MonoBehaviour
 {
-    public int levelsBeat = 0;
     [SerializeField] private TMP_Text time;
     [SerializeField] private Timer timer;
         [SerializeField] GameObject panel;
