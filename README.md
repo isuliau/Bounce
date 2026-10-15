@@ -14,4 +14,5 @@ This was a blast to make and playing with physics is always fun. Anyways, check 
 
 <img width="1864" height="1002" alt="image" src="https://github.com/user-attachments/assets/a4b513cc-a8fe-4ec1-8015-4ef230e194c7" />
 
-<img width="1879" height="1053" alt="image" src="https://github.com/user-attachments/assets/9a230767-c7b1-41ba-9c0e-b7724aac3c5e" />
+<img width="1792" height="1019" alt="image" src="https://github.com/user-attachments/assets/839dac6b-05e2-4b2b-9264-f14bdb4f74ba" />
+
