@@ -8,6 +8,8 @@ The goal is to make to the yellow rectangle at the end of each level called a fl
 
 This was a blast to make and playing with physics is always fun. Anyways, check out the game at https://isuliau.itch.io/bounce.
 
+(also there will be extra code, since the next devlog will include it for the NEXT week's project) 
+
 <img width="1224" height="951" alt="image" src="https://github.com/user-attachments/assets/d7fdee70-c7ef-4756-816d-7750f80336f8" />
 
 <img width="1864" height="1002" alt="image" src="https://github.com/user-attachments/assets/a4b513cc-a8fe-4ec1-8015-4ef230e194c7" />
