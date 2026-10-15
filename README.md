@@ -1,5 +1,15 @@
-This will be a kinda rushed readme since I only have like 24 minutes left i think? I will change it once I ship it.
+This is a game called BOUNCE, about being a cube and, ironically, bouncing your way from level to level with unity physics as quickly as possible.
 
-So for this I made a game about jumping around and clearing levels, right now its pretty WIP but I will polish it greatly next week
+Your can move with A and D, boosting yourself instead of flat movement, be carefull because even if you can gain impressive speed, that doesn't gurantee that you will make it to the end unscathed...
 
-you move with A and D, you jump with space, you burst with r, It uses unity physics, hope you like my game! 
+For vertical movilty, you can press Spacebar to gain direct vertical velocity or R to push yourself off walls with greater speed but you wont be guranteed to only jump upwards.
+
+The goal is to make to the yellow rectangle at the end of each level called a flag. The thrill comes from being as fast as possible rather than just clearing the levels themselves.
+
+This was a blast to make and playing with physics is always fun. Anyways, check out the game at https://isuliau.itch.io/bounce.
+
+<img width="1224" height="951" alt="image" src="https://github.com/user-attachments/assets/d7fdee70-c7ef-4756-816d-7750f80336f8" />
+
+<img width="1864" height="1002" alt="image" src="https://github.com/user-attachments/assets/a4b513cc-a8fe-4ec1-8015-4ef230e194c7" />
+
+<img width="1879" height="1053" alt="image" src="https://github.com/user-attachments/assets/9a230767-c7b1-41ba-9c0e-b7724aac3c5e" />
