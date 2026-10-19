@@ -1,4 +1,4 @@
-This is a game called BOUNCE, about being a cube and, ironically, bouncing your way from level to level with unity physics as quickly as possible.
+This is a game called BOUNCE, about being a square and, ironically, bouncing your way from level to level with unity physics as quickly as possible.
 
 Your can move with A and D, boosting yourself instead of flat movement, be carefull because even if you can gain impressive speed, that doesn't gurantee that you will make it to the end unscathed...
 
@@ -8,7 +8,7 @@ The goal is to make to the yellow rectangle at the end of each level called a fl
 
 This was a blast to make and playing with physics is always fun. Anyways, check out the game at https://isuliau.itch.io/bounce.
 
-(also there will be extra code, since the next devlog will include it for the NEXT week's project) 
+If you hold down D or A, it may take a little bit to start going fast, but if you spawm them, you might get a faster startup but less sustainability (since you have to keep spamming)
 
 <img width="1224" height="951" alt="image" src="https://github.com/user-attachments/assets/d7fdee70-c7ef-4756-816d-7750f80336f8" />
 
@@ -16,3 +16,4 @@ This was a blast to make and playing with physics is always fun. Anyways, check 
 
 <img width="1792" height="1019" alt="image" src="https://github.com/user-attachments/assets/839dac6b-05e2-4b2b-9264-f14bdb4f74ba" />
 
+<img width="1548" height="459" alt="image" src="https://github.com/user-attachments/assets/f863f345-e511-435c-a18b-53b615876377" />
