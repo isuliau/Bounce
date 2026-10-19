@@ -8,7 +8,7 @@ using Unity.Burst;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    
+   
     [SerializeField] private float Speed = 8f;
     [SerializeField] private float jumpPower = 12f;
     [SerializeField] private LayerMask groundLayer;

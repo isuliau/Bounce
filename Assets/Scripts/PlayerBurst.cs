@@ -8,7 +8,7 @@ public class PlayerBurst : MonoBehaviour
     [SerializeField] private GameObject soul;
     [SerializeField] private GameObject BurstDarken;
     [SerializeField] private Player player;
-
+    [SerializeField] private Animator m_Animator;
     [SerializeField] private float rayDistance = 2f;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private float push;
@@ -67,6 +67,7 @@ public class PlayerBurst : MonoBehaviour
 
     public IEnumerator SoulMode()
     {
+        m_Animator.SetBool("burst 0", true);
         soul.SetActive(true);
         souling = false;
 
@@ -80,9 +81,12 @@ public class PlayerBurst : MonoBehaviour
         soul.SetActive(false);
         yield return new WaitForSeconds(0.2f);
         pushed = false;
+        m_Animator.SetBool("burst 0", false);
         yield return new WaitForSeconds(0.2f);
         BurstDarken.SetActive(false);
         Time.timeScale = 1f;
         souling = true;
+        
     }
+
 }

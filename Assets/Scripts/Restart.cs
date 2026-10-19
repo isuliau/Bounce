@@ -15,4 +15,8 @@ public class Restart : MonoBehaviour
     player.transform.position = spawn.transform.position;
     timer.time = 0;
     }
-}
+     public void SetbackthatbigblockIwanttomakethisfunctionnamelongfornoreason(MovingSpike f)
+    {
+        f.f = 0;
+    }
+    }
